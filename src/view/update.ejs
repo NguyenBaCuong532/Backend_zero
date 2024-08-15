@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+    fieldset {
+      background-color: #eeeeee;
+    }
+    
+    legend {
+      color: rgb(22, 52, 186);
+      padding: 5px 10px;
+    }
+    
+    input {
+      margin: 5px;
+    }
+    form{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .d-none{
+    display: none;
+
+  }
+    </style>
+<body>
+    <div class="topnav">
+        <a  href="/">Home</a>
+        <a  href="/create" >Create User</a>
+      </div>
+
+      <form action="/update-user" method="post">
+       
+          <legend>Form Update User:</legend>
+          <label for="fname">First name:</label>
+          <div class="d-none">
+              <input type="text" id="Id" name="Id" value=" <%=userEdit.Id%>"/>
+          </div>
+          
+          <input type="text" id="fname" name="fname" value=" <%=userEdit.firstname%>"/><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname" value=" <%=userEdit.lastname%>"/><br><br>
+     
+          <input type="submit" value="Save" >
+        </fieldset>
+      </form>
+</body>
+</html>
