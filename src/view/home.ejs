@@ -44,14 +44,16 @@ h2{
     width: 100%;
     height: 100%;
    }
+   a{
+    margin-left: 20px;
+   }
     </style>
 <body>
   <div class="top">
       <div class="topnav">
         <a class="active" href="/">Home</a>
         <a href="/create">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        
       </div>
 
       <h2>List User</h2>
@@ -69,7 +71,7 @@ h2{
     <tr>
     <td><%=listUsers[i].firstname%></td>
     <td><%=listUsers[i].lastname%></td>
-    <td>$100</td>
+    <td><%=listUsers[i].city%></td>
     <td>
       <a href="/update/<%=listUsers[i].Id%>"> Edit </a>
       <a href="/delete/<%=listUsers[i].Id%>"> Delete </a>
